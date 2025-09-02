@@ -14,10 +14,10 @@ public:
     genre(genre&& other) noexcept;
     ~genre();
 
-    std::string getName;
+    std::string getName() ;
     std::string getDescription();
 
-    void setName(std::string name);
+    void setName(std::string newName);
     void setDescription(std::string description);
 
 

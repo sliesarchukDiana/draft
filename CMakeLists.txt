@@ -7,4 +7,5 @@ include_directories(.)
 
 add_executable(draft
         genre.cpp
-        genre.h)
+        genre.h
+        main.cpp)
