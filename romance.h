@@ -8,7 +8,7 @@ class romance: public movie {
 
     public:
         romance();
-        romance(std::string title, std::string director, std::string plot, int runningTime, int budget, bool happyEnding);
+        romance(std::string title, std::string director, std::string country, int year, int budget, int gross, int runningTime, std::string plot, bool happyEnding);
         romance(const romance& other);
         romance(romance&& other) noexcept;
         ~romance() override;

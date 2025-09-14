@@ -2,12 +2,12 @@
 #include <iostream>
 #include <utility>
 
-romance::romance() : movie("Unknown romance", "Unknown", "Unknown", 0, 0), happyEnding(true) {
+romance::romance() : movie("Unknown action", "Unknown director", "Unknown country", 0, 0, 0, 0, "No info"), happyEnding(true) {
     std::cout << "Default constructor was called for " << getTitle() << " of class romance" << std::endl;
 }
 
-romance::romance(std::string title, std::string director, std::string plot, int runningTime, int budget, bool happyEnding)
-    : movie(std::move(title), std::move(director), std::move(plot), runningTime, budget), happyEnding(happyEnding) {
+romance::romance(std::string t, std::string d, std::string c, int y, int b, int g, int rt, std:: string p, bool happyEnding)
+    : movie(std::move(t), std::move(d), std::move(c), y, b, g, rt, std::move(p)), happyEnding(happyEnding) {
     std::cout << "Parameterized constructor was called for " << getTitle() << " of class romance" << std::endl;
 }
 
@@ -42,10 +42,13 @@ std::string romance::happyEndingToMessage(bool ending) {
 }
 
 void romance::displayDetails() const {
-    std::cout << "Romance Movie: " << getTitle()
-              << "\nDirector: " << getDirector()
-              << "\nPlot: " << getPlot()
-              << "\nRunning Time: " << getRunningTime() << " minutes"
-              << "\nBudget: " << getBudget() <<"$"
-              << "\nEnding: " << happyEndingToMessage(happyEnding) << std::endl;
+    std::cout << "Title: " << getTitle() << "\n"
+    << "Director: " << getDirector() << "\n"
+    << "Country: " << getCountry() << "\n"
+    << "Year: " << getYear() << "\n"
+    << "Budget: " << getBudget() << "\n"
+    << "Gross: " << getGross() <<"\n"
+    << "Running Time: " << getRunningTime() << " minutes\n"
+    << "Plot: " << getPlot() <<"\n"
+    << "Ending: " << happyEndingToMessage(happyEnding) << std::endl;
 }
