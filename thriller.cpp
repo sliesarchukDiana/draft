@@ -3,12 +3,12 @@
 #include <iostream>
 #include <utility>
 
-thriller::thriller() : movie("Unknown thriller", "Unknown", "Unknown", 0, 0), isChildFriendly(false) {
+thriller::thriller() : movie("Unknown action", "Unknown director", "Unknown country", 0, 0, 0, 0, "No info"), isChildFriendly(false) {
     std::cout << "Default constructor was called for " << getTitle() << " of class thriller" << std::endl;
 }
 
-thriller::thriller(std::string title, std::string director, std::string plot, int runningTime, int budget, bool childFriendly)
-    : movie(std::move(title), std::move(director), std::move(plot), runningTime, budget), isChildFriendly(childFriendly) {
+thriller::thriller(std::string t, std::string d, std::string c, int y, int b, int g, int rt, std:: string p, bool childFriendly)
+    : movie(std::move(t), std::move(d), std::move(c), y, b, g, rt, std::move(p)), isChildFriendly(childFriendly) {
     std::cout << "Parameterized constructor was called for " << getTitle() << " of class thriller" << std::endl;
 }
 
@@ -43,10 +43,13 @@ std::string thriller::isChildFriendlyToMessage(bool childFriendly) {
 }
 
 void thriller::displayDetails() const {
-    std::cout << "Thriller Movie: " << getTitle()
-              << "\nDirector: " << getDirector()
-              << "\nPlot: " << getPlot()
-              << "\nRunning Time: " << getRunningTime() << " minutes"
-              << "\nBudget: " << getBudget() <<"$"
-              << "\nAge limit: " << isChildFriendlyToMessage(isChildFriendly) << std::endl;
+    std::cout << "Title: " << getTitle() << "\n"
+    << "Director: " << getDirector() << "\n"
+    << "Country: " << getCountry() << "\n"
+    << "Year: " << getYear() << "\n"
+    << "Budget: " << getBudget() << "\n"
+    << "Gross: " << getGross() <<"\n"
+    << "Running Time: " << getRunningTime() << " minutes\n"
+    << "Plot: " << getPlot() <<"\n"
+    << "Age limit: " << isChildFriendlyToMessage(isChildFriendly) << std::endl;
 }

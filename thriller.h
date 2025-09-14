@@ -8,7 +8,7 @@ private:
     bool isChildFriendly{};
 public:
     thriller();
-    thriller(std::string title, std::string director, std::string plot, int runningTime, int budget, bool isChildFriendly);
+    thriller(std::string title, std::string director, std::string country, int year, int budget, int gross, int runningTime, std::string plot, bool isChildFriendly);
     thriller(const thriller& other); //copy constructor//
     thriller(thriller&& other) noexcept; //move constructor//
     ~thriller() override;
