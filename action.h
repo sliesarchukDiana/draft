@@ -3,21 +3,32 @@
 #include "movie.h"
 #include <string>
 
-class action final : public movie {
-private:
-    int explosions{};
+enum class actionSubgenre {
+    noInfo,
+    hybrid,
+    actionComedy,
+    martialArts,
+    wuxia,
+    kungFu,
+    americanStyle,
+    heroicBloodshed
+};
 
+class action final : public movie {
 public:
     action();
-    action(std::string title, std::string director, std::string plot, int runningTime, int budget, int explosions);
+    action(std::string title, std::string director, std::string country, int year, int budget, int gross, int runningTime, std::string plot, actionSubgenre subgenre);
     action(const action& other);
     action(action&& other) noexcept;
     ~action() override;
 
-    int getExplosions() const;
-    void setExplosions(int newExplosions);
+    actionSubgenre getSubgenre() const noexcept;
+    void setSubgenre(actionSubgenre subgenre);
     void displayDetails() const override;
-    action& operator=(const action& other);  // Copy assignment//
+    static std::string actionSubgenreToString(actionSubgenre subgenre);
+
+    private:
+    actionSubgenre ActionSubgenre;
 };
 
 #endif // ACTION_H
