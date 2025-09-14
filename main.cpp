@@ -1,9 +1,10 @@
 #include <iostream>
-#include <string>
-#include "genre.h"
+#include "terminal_interface.h"
+using namespace std;
 
 int main() {
-    std::cout<<"Hello! This is a test"<<std::endl;
-    genre action ("Action", "The action film is a film genre that predominantly features chase sequences, fights, shootouts, explosions, and stunt work.");
+    cout << "Test begin"<< endl;
+    TerminalInterface interface;
+    interface.run();
     return 0;
 }

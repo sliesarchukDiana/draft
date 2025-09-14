@@ -1,2 +1,2 @@
 # draft
-draft for coursework (attempt at metaprogramming)
+draft for coursework

@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2025.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\laboratory.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\laboratory.dir/objects.a @CMakeFiles\laboratory.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\laboratory.dir/objects.a -Wl,--no-whole-archive -o laboratory.exe -Wl,--out-implib,liblaboratory.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\laboratory.dir\linkLibs.rsp
