@@ -1,14 +1,14 @@
-#include "sciFy.h"
+#include "sciFi.h"
 #include <iostream>
 #include <utility>
 
 sciFy::sciFy()
-    : movie("Unknown sci-fi", "Unknown", "Unknown", 0, 0), timePeriod(TimePeriod::NoInfo) {
+    : movie("Unknown action", "Unknown director", "Unknown country", 0, 0, 0, 0, "No info"), timePeriod(TimePeriod::NoInfo) {
     std::cout << "Default constructor was called for " << getTitle() << " of class sci-fi" << std::endl;
 }
 
-sciFy::sciFy(std::string title, std::string director, std::string plot, int runningTime, int budget, TimePeriod period)
-    : movie(std::move(title), std::move(director), std::move(plot), runningTime, budget), timePeriod(period) {
+sciFy::sciFy(std::string t, std::string d, std::string c, int y, int b, int g, int rt, std:: string p, TimePeriod period)
+    : movie(std::move(t), std::move(d), std::move(c), y, b, g, rt, std::move(p)), timePeriod(period) {
     std::cout << "Parameterized constructor was called for " << getTitle() << " of class sci-fi" << std::endl;
 }
 
@@ -47,10 +47,13 @@ std::string sciFy::timePeriodToString(TimePeriod period) {
 }
 
 void sciFy::displayDetails() const {
-    std::cout << "Sci-Fi Movie: " << getTitle()
-              << "\nDirector: " << getDirector()
-              << "\nPlot: " << getPlot()
-              << "\nRunning Time: " << getRunningTime() << " minutes"
-              << "\nBudget: $" << getBudget()
-              << "\nTime Period: " << timePeriodToString(timePeriod) << '\n';
+    std::cout << "Title: " << getTitle() << "\n"
+    << "Subgenre: " << timePeriodToString(timePeriod) << "\n"
+    << "Director: " << getDirector() << "\n"
+    << "Country: " << getCountry() << "\n"
+    << "Year: " << getYear() << "\n"
+    << "Budget: " << getBudget() << "\n"
+    << "Gross: " << getGross() <<"\n"
+    << "Running Time: " << getRunningTime() << " minutes\n"
+    << "Plot: " << getPlot() << std::endl;
 }

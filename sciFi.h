@@ -1,5 +1,5 @@
-#ifndef SCIFY_H
-#define SCIFY_H
+#ifndef SCIFI_H
+#define SCIFI_H
 #include "movie.h"
 #include <iosfwd>
 
@@ -15,7 +15,7 @@ enum class TimePeriod {
 class sciFy : public movie {
 public:
     sciFy();
-    sciFy(std::string title, std::string director, std::string plot, int runningTime, int budget, TimePeriod period);
+    sciFy(std::string title, std::string director, std::string country, int year, int budget, int gross, int runningTime, std::string plot, TimePeriod period);
     sciFy(const sciFy& other);
     sciFy(sciFy&& other) noexcept;
     ~sciFy() override;
@@ -31,4 +31,4 @@ private:
     TimePeriod timePeriod;
 };
 
-#endif // SCIFY_H
+#endif // SCIFI_H
