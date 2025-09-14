@@ -4,7 +4,7 @@
 #include <cctype>
 #include <fstream>
 #include "action.h"
-#include "sciFy.h"
+#include "sciFi.h"
 #include "romance.h"
 #include "thriller.h"
 
@@ -51,67 +51,97 @@ bool MovieInterface::getYesNo(const string& prompt) {
     }
 }
 
+
+
+
+
+
 void MovieInterface::loadMovies() {
     ifstream file("movies.txt");
     if (!file.is_open()) return;
 
-    string type, title, director, plot;
-    int runtime, budget, explosions;
-    bool happy, isChildFriendly;
+    string type, title, director, country, plot;
+    int year, budget, gross, runningTime;
 
     while (getline(file, type)) {
+        if (type.empty()) continue; // пропуск пустих рядків
         getline(file, title);
         getline(file, director);
+        getline(file, country);
         getline(file, plot);
-        file >> runtime >> budget;
-        file.ignore();
+        file >> year >> budget >> gross >> runningTime;
 
         if (type == "ACTION") {
-            file >> explosions;
-            file.ignore();
-            movies.push_back(make_unique<action>(title, director, plot, runtime, budget, explosions));
+            int tmp;
+            file >> tmp;
+            file.ignore(numeric_limits<streamsize>::max(), '\n');
+            auto s = static_cast<actionSubgenre>(tmp);
+            movies.push_back(make_unique<action>(title, director, country, year, budget, gross, runningTime, plot, s));
         }
         else if (type == "SCIFI") {
             int p;
             file >> p;
-            file.ignore();
+            file.ignore(numeric_limits<streamsize>::max(), '\n');
             auto period = static_cast<TimePeriod>(p);
-            movies.push_back(make_unique<sciFy>(title, director, plot, runtime, budget, period));
+            movies.push_back(make_unique<sciFy>(title, director, country, year, budget, gross, runningTime, plot, period));
         }
         else if (type == "ROMANCE") {
+            bool happy;
             file >> happy;
-            file.ignore();
-            movies.push_back(make_unique<romance>(title, director, plot, runtime, budget, happy));
+            file.ignore(numeric_limits<streamsize>::max(), '\n');
+            movies.push_back(make_unique<romance>(title, director, country, year, budget, gross, runningTime, plot, happy));
         }
         else if (type == "THRILLER") {
+            bool isChildFriendly;
             file >> isChildFriendly;
-            file.ignore();
-            movies.push_back(make_unique<thriller>(title, director, plot, runtime, budget, isChildFriendly));
+            file.ignore(numeric_limits<streamsize>::max(), '\n');
+            movies.push_back(make_unique<thriller>(title, director, country, year, budget, gross, runningTime, plot, isChildFriendly));
         }
     }
     file.close();
 }
+
 
 void MovieInterface::saveMovies() const {
     ofstream file("movies.txt");
     if (!file.is_open()) throw runtime_error("Could not save movies to file");
 
     for (const auto& m : movies) {
-        if (dynamic_cast<action*>(m.get())) {
-            auto* a = dynamic_cast<action*>(m.get());
-            file << "ACTION\n" << a->getTitle() << "\n" << a->getDirector() << "\n" << a->getPlot() << "\n" << a->getRunningTime() << " " << a->getBudget() << "\n" << a->getExplosions() << "\n";
+        if (auto* a = dynamic_cast<action*>(m.get())) {
+            file << "ACTION\n"
+                 << a->getTitle() << "\n"
+                 << a->getDirector() << "\n"
+                 << a->getCountry() << "\n"
+                 << a->getPlot() << "\n"
+                 << a->getYear() << " " << a->getBudget() << " " << a->getGross() << " " << a->getRunningTime() << "\n"
+                 << static_cast<int>(a->getSubgenre()) << "\n";
         }
-        else if (dynamic_cast<sciFy*>(m.get())) {
-            auto* s = dynamic_cast<sciFy*>(m.get());
-            file << "SCIFI\n" << s->getTitle() << "\n" << s->getDirector() << "\n" << s->getPlot() << "\n" << s->getRunningTime() << " " << s->getBudget() << "\n" << static_cast<int>(s->getTimePeriod()) << "\n";
+        else if (auto* s = dynamic_cast<sciFy*>(m.get())) {
+            file << "SCIFI\n"
+                 << s->getTitle() << "\n"
+                 << s->getDirector() << "\n"
+                 << s->getCountry() << "\n"
+                 << s->getPlot() << "\n"
+                 << s->getYear() << " " << s->getBudget() << " " << s->getGross() << " " << s->getRunningTime() << "\n"
+                 << static_cast<int>(s->getTimePeriod()) << "\n";
         }
-        else if (dynamic_cast<romance*>(m.get())) {
-            auto* r = dynamic_cast<romance*>(m.get());
-            file << "ROMANCE\n" << r->getTitle() << "\n" << r->getDirector() << "\n" << r->getPlot() << "\n" << r->getRunningTime() << " " << r->getBudget() << "\n" << r->getHappyEnding() << "\n";
+        else if (auto* r = dynamic_cast<romance*>(m.get())) {
+            file << "ROMANCE\n"
+                 << r->getTitle() << "\n"
+                 << r->getDirector() << "\n"
+                 << r->getCountry() << "\n"
+                 << r->getPlot() << "\n"
+                 << r->getYear() << " " << r->getBudget() << " " << r->getGross() << " " << r->getRunningTime() << "\n"
+                 << r->getHappyEnding() << "\n";
         }
-        else if (dynamic_cast<thriller*>(m.get())) {
-            auto* t = dynamic_cast<thriller*>(m.get());
-            file << "THRILLER\n" << t->getTitle() << "\n" << t->getDirector() << "\n" << t->getPlot() << "\n" << t->getRunningTime() << " " << t->getBudget() << "\n" << t->getIsChildFriendly() << "\n";
+        else if (auto* t = dynamic_cast<thriller*>(m.get())) {
+            file << "THRILLER\n"
+                 << t->getTitle() << "\n"
+                 << t->getDirector() << "\n"
+                 << t->getCountry() << "\n"
+                 << t->getPlot() << "\n"
+                 << t->getYear() << " " << t->getBudget() << " " << t->getGross() << " " << t->getRunningTime() << "\n"
+                 << t->getIsChildFriendly() << "\n";
         }
     }
     file.close();
@@ -196,30 +226,34 @@ void TerminalInterface::addMovie() {
 
     string title = getString("Title: ");
     string director = getString("Director: ");
+    string country = getString("Country: ");
+    int year = getInt("Year: ", 1900, 2030);
+    int budget = getInt("Budget:  ", 1, INT_MAX);
+    int gross = getInt("Gross: ", 1, INT_MAX);
+    int runningTime = getInt("RunningTime: ", 1, 999);
     string plot = getString("Plot: ");
-    int runtime = getInt("Runtime (minutes): ", 1, 300);
-    int budget = getInt("Budget: ", 0, INT_MAX);
 
     switch (type) {
         case 1: {
-            int explosions = getInt("Explosion count: ", 0, 1000);
-            movies.push_back(make_unique<action>(title, director, plot, runtime, budget, explosions));
+            cout<<"1. No Info\n2. Hybrid\n3/Action comedy\n4.Martial Arts\n5. Wuxia\n6.Kung-Fu\n7.American Style\n8.Heroic Bloodshed\n";
+            actionSubgenre subgenre = static_cast<actionSubgenre>(getInt("Subgenre: ", 1, 8) - 1);
+            movies.push_back(make_unique<action>(title, director, country, year, budget, gross, runningTime, plot, subgenre));
             break;
         }
         case 2: {
             cout << "1. No Info\n2. Near Future\n3. Dystopian\n" << "4. Cyberpunk\n5. Space Age\n6. Alternate History\n";
             TimePeriod period = static_cast<TimePeriod>(getInt("Time period: ", 1, 6) - 1);
-            movies.push_back(make_unique<sciFy>(title, director, plot, runtime, budget, period));
+            movies.push_back(make_unique<sciFy>(title, director, country, year, budget, gross, runningTime, plot, period));
             break;
         }
         case 3: {
             bool happy = getYesNo("Happy ending? (y/n): ");
-            movies.push_back(make_unique<romance>(title, director, plot, runtime, budget, happy));
+            movies.push_back(make_unique<romance>(title, director, country, year, budget, gross, runningTime, plot, happy));
             break;
         }
         case 4: {
             bool isChildFriendly = getYesNo("Is the movie safe for younger audience? (y/n): ");
-            movies.push_back(make_unique<thriller>(title, director, plot, runtime, budget, isChildFriendly));
+            movies.push_back(make_unique<thriller>(title, director, country, year, budget, gross, runningTime, plot, isChildFriendly));
             break;
         }
         default:
@@ -246,10 +280,7 @@ void TerminalInterface::viewMovie() const {
     if (movies.empty()) return;
 
     int choice = getInt("Select movie to view: ", 1, static_cast<int>(movies.size()));
-    const movie& movieRef = *movies[choice - 1]; // Base class reference
-    // Static binding
-    movieRef.printBasicInfo();
-    // Dynamic binding
+    const movie& movieRef = *movies[choice - 1];
     movieRef.displayDetails();
 }
 
@@ -283,22 +314,48 @@ void TerminalInterface::editMovie(movie& m) {
 
 void TerminalInterface::editBaseProperties(movie& m) {
     cout << "Current title: " << m.getTitle() << endl;
-    string newTitle = getString("New title (enter to keep current): ");
-    if (!newTitle.empty()) m.setTitle(newTitle);
+    string newTitle = getString("New title (N to keep current): ");
+    if (newTitle != "n" && newTitle != "N") {
+        m.setTitle(newTitle);
+    }
 
     cout << "Current director: " << m.getDirector() << endl;
-    string newDirector = getString("New director (enter to keep current): ");
-    if (!newDirector.empty()) m.setDirector(newDirector);
+    string newDirector = getString("New director (N to keep current): ");
+    if (newDirector != "n" && newDirector != "N") {
+        m.setDirector(newDirector);
+    }
 
-    cout << "Current plot: " << m.getPlot() << endl;
-    string newPlot = getString("New plot (enter to keep current): ");
-    if (!newPlot.empty()) m.setPlot(newPlot);
+    cout << "Current country: " << m.getCountry() << endl;
+    string newCountry = getString("New country (N to keep current): ");
+    if (newCountry != "n" && newCountry != "N") {
+        m.setCountry(newCountry);
+    }
 
-    cout << "Current runtime: " << m.getRunningTime() << " minutes\n";
-    int newRuntime = getInt("New runtime (0 to keep current): ", 0, 1000);
-    if (newRuntime > 0) m.setRunningTime(newRuntime);
+    cout<<"Current year: "<<m.getYear()<<endl;
+    int newYear = getInt("New year (0 to keep current): ", 0, 2030);
+    if (newYear > 0) m.setYear(newYear);
 
-    cout << "Current budget: $" << m.getBudget() << endl;
+    cout << "Current budget: " << m.getBudget() << endl;
     int newBudget = getInt("New budget (0 to keep current): ", 0, INT_MAX);
     if (newBudget > 0) m.setBudget(newBudget);
+
+    cout << "Current gross: " << m.getGross() << endl;
+    int newGross = getInt("New gross (0 to keep current): ", 0, INT_MAX);
+    if (newGross > 0) m.setGross(newGross);
+
+    cout << "Current running time: " << m.getRunningTime() << endl;
+    int newRunningTime = getInt("New running time (0 to keep current): ", 0, INT_MAX);
+    if (newRunningTime > 0) m.setRunningTime(newRunningTime);
+
+    cout << "Current plot: " << m.getPlot() << endl;
+    string newPlot = getString("New plot (N to keep current): ");
+    if (newPlot != "n" && newPlot != "N") {
+        m.setPlot(newPlot);
+    }
+
+
 }
+
+
+
+

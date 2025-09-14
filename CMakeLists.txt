@@ -10,7 +10,7 @@ add_executable(laboratory
         action.h
     main.cpp
         sciFy.cpp
-        sciFy.h
+        sciFi.h
         romance.cpp
         romance.h
         thriller.cpp

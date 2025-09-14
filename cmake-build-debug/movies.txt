@@ -1,54 +1,14 @@
-ACTION
-Avengers: Endgame
-Brothers Russo
-Superheroes save the planet
-181 356000000
-20
 SCIFI
 Alien
 Ridley Scott
-A spaceship crew is stalked by an alien
-117 11000000
+USA
+The commercial spaceship Nostromo receives a distress signal and investigates a derelict vessel, where a crew member is attacked by an alien creature that emerges from an egg.
+1979 84000000 188000000 199
 4
 ROMANCE
 La La Land
 Damien Chazelle
-A jazz pianist and actress fall in love while pursuing dreams in Los Angeles
-128 30000000
-0
-ACTION
-Fast and Furious
-Justin Lin
-Street racing and heists
-130 200000000
-25
-ROMANCE
-Sweet Home Alabama
-Andy Tennant
-A woman must choose between two loves
-108 30000000
-1
-THRILLER
-The Silence of the Lambs
-Jonathan Demme
-FBI cadet must receive help from a cannibal to catch another serial killer
-118 19000000
-0
-THRILLER
-Frankenweenie
-Tim Burton
-A boy revives his dog in a science experiment, leading to unexpected consequences
-87 3900000
-1
-THRILLER
-Inception
-Christopher Nolan
-A mind-bending heist within dreams
-148 160000000
-0
-THRILLER
-Se7en
-David Fincher
-Detectives track down a serial killer who uses deadly sins as motives
-127 33000000
+USA
+aspiring actress Mia and jazz pianist Sebastian, who meet and fall in love in Los Angeles while pursuing the dream
+2016 30000000 472000000 128
 0
