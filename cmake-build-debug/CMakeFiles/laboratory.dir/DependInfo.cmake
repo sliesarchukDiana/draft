@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/user/Desktop/draft/User.cpp" "CMakeFiles/laboratory.dir/User.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/User.cpp.obj.d"
   "C:/Users/user/Desktop/draft/main.cpp" "CMakeFiles/laboratory.dir/main.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/main.cpp.obj.d"
   "C:/Users/user/Desktop/draft/movie.cpp" "CMakeFiles/laboratory.dir/movie.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/movie.cpp.obj.d"
+  "C:/Users/user/Desktop/draft/user_manager.cpp" "CMakeFiles/laboratory.dir/user_manager.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/user_manager.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/laboratory.dir/main.cpp.obj.d"
   "CMakeFiles/laboratory.dir/movie.cpp.obj"
   "CMakeFiles/laboratory.dir/movie.cpp.obj.d"
+  "CMakeFiles/laboratory.dir/user_manager.cpp.obj"
+  "CMakeFiles/laboratory.dir/user_manager.cpp.obj.d"
   "laboratory.exe"
   "laboratory.exe.manifest"
   "laboratory.pdb"

@@ -200,6 +200,30 @@ movie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie.cpp.s
 .PHONY : movie.cpp.s
 
+user_manager.obj: user_manager.cpp.obj
+.PHONY : user_manager.obj
+
+# target to build an object file
+user_manager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/user_manager.cpp.obj
+.PHONY : user_manager.cpp.obj
+
+user_manager.i: user_manager.cpp.i
+.PHONY : user_manager.i
+
+# target to preprocess a source file
+user_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/user_manager.cpp.i
+.PHONY : user_manager.cpp.i
+
+user_manager.s: user_manager.cpp.s
+.PHONY : user_manager.s
+
+# target to generate assembly for a file
+user_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/user_manager.cpp.s
+.PHONY : user_manager.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... movie.obj
 	@echo ... movie.i
 	@echo ... movie.s
+	@echo ... user_manager.obj
+	@echo ... user_manager.i
+	@echo ... user_manager.s
 .PHONY : help
 
 
