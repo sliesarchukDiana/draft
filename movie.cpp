@@ -40,7 +40,7 @@ movie& movie::operator=(const movie& other) { //copy assignment operator//
     return *this;
 }
 
-movie& movie::operator=(movie&& other) noexcept {
+movie& movie::operator=(movie&& other) noexcept { //move assignment operator//
     if (this != &other) {
         title = std::move(other.title);
         genre = other.genre;
