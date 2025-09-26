@@ -11,4 +11,6 @@ add_executable(laboratory
         movie.h
         movie.cpp
         movie_interface.h
+        User.cpp
+        User.h
 )
