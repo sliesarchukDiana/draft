@@ -8,13 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/user/Desktop/draft/action.cpp" "CMakeFiles/laboratory.dir/action.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/action.cpp.obj.d"
   "C:/Users/user/Desktop/draft/main.cpp" "CMakeFiles/laboratory.dir/main.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/main.cpp.obj.d"
   "C:/Users/user/Desktop/draft/movie.cpp" "CMakeFiles/laboratory.dir/movie.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/movie.cpp.obj.d"
-  "C:/Users/user/Desktop/draft/romance.cpp" "CMakeFiles/laboratory.dir/romance.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/romance.cpp.obj.d"
-  "C:/Users/user/Desktop/draft/sciFy.cpp" "CMakeFiles/laboratory.dir/sciFy.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/sciFy.cpp.obj.d"
-  "C:/Users/user/Desktop/draft/terminal_interface.cpp" "CMakeFiles/laboratory.dir/terminal_interface.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/terminal_interface.cpp.obj.d"
-  "C:/Users/user/Desktop/draft/thriller.cpp" "CMakeFiles/laboratory.dir/thriller.cpp.obj" "gcc" "CMakeFiles/laboratory.dir/thriller.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

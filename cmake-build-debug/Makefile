@@ -128,30 +128,6 @@ laboratory/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/build
 .PHONY : laboratory/fast
 
-action.obj: action.cpp.obj
-.PHONY : action.obj
-
-# target to build an object file
-action.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/action.cpp.obj
-.PHONY : action.cpp.obj
-
-action.i: action.cpp.i
-.PHONY : action.i
-
-# target to preprocess a source file
-action.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/action.cpp.i
-.PHONY : action.cpp.i
-
-action.s: action.cpp.s
-.PHONY : action.s
-
-# target to generate assembly for a file
-action.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/action.cpp.s
-.PHONY : action.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -200,102 +176,6 @@ movie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie.cpp.s
 .PHONY : movie.cpp.s
 
-romance.obj: romance.cpp.obj
-.PHONY : romance.obj
-
-# target to build an object file
-romance.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/romance.cpp.obj
-.PHONY : romance.cpp.obj
-
-romance.i: romance.cpp.i
-.PHONY : romance.i
-
-# target to preprocess a source file
-romance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/romance.cpp.i
-.PHONY : romance.cpp.i
-
-romance.s: romance.cpp.s
-.PHONY : romance.s
-
-# target to generate assembly for a file
-romance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/romance.cpp.s
-.PHONY : romance.cpp.s
-
-sciFy.obj: sciFy.cpp.obj
-.PHONY : sciFy.obj
-
-# target to build an object file
-sciFy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/sciFy.cpp.obj
-.PHONY : sciFy.cpp.obj
-
-sciFy.i: sciFy.cpp.i
-.PHONY : sciFy.i
-
-# target to preprocess a source file
-sciFy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/sciFy.cpp.i
-.PHONY : sciFy.cpp.i
-
-sciFy.s: sciFy.cpp.s
-.PHONY : sciFy.s
-
-# target to generate assembly for a file
-sciFy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/sciFy.cpp.s
-.PHONY : sciFy.cpp.s
-
-terminal_interface.obj: terminal_interface.cpp.obj
-.PHONY : terminal_interface.obj
-
-# target to build an object file
-terminal_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/terminal_interface.cpp.obj
-.PHONY : terminal_interface.cpp.obj
-
-terminal_interface.i: terminal_interface.cpp.i
-.PHONY : terminal_interface.i
-
-# target to preprocess a source file
-terminal_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/terminal_interface.cpp.i
-.PHONY : terminal_interface.cpp.i
-
-terminal_interface.s: terminal_interface.cpp.s
-.PHONY : terminal_interface.s
-
-# target to generate assembly for a file
-terminal_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/terminal_interface.cpp.s
-.PHONY : terminal_interface.cpp.s
-
-thriller.obj: thriller.cpp.obj
-.PHONY : thriller.obj
-
-# target to build an object file
-thriller.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/thriller.cpp.obj
-.PHONY : thriller.cpp.obj
-
-thriller.i: thriller.cpp.i
-.PHONY : thriller.i
-
-# target to preprocess a source file
-thriller.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/thriller.cpp.i
-.PHONY : thriller.cpp.i
-
-thriller.s: thriller.cpp.s
-.PHONY : thriller.s
-
-# target to generate assembly for a file
-thriller.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/thriller.cpp.s
-.PHONY : thriller.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -305,27 +185,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... laboratory
-	@echo ... action.obj
-	@echo ... action.i
-	@echo ... action.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... movie.obj
 	@echo ... movie.i
 	@echo ... movie.s
-	@echo ... romance.obj
-	@echo ... romance.i
-	@echo ... romance.s
-	@echo ... sciFy.obj
-	@echo ... sciFy.i
-	@echo ... sciFy.s
-	@echo ... terminal_interface.obj
-	@echo ... terminal_interface.i
-	@echo ... terminal_interface.s
-	@echo ... thriller.obj
-	@echo ... thriller.i
-	@echo ... thriller.s
 .PHONY : help
 
 
