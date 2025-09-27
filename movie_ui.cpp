@@ -88,7 +88,7 @@ void MovieUI::displayMovieDetails(const std::string& title) const {
     }
 }
 
-void MovieUI::addMovieUI(const user* currentUser) const {
+void MovieUI::addMovieUI(user* currentUser) const {
     if (!currentUser || !currentUser->getHasAdministratorRights()) {
         std::cout << "Administrator rights required!\n";
         return;
@@ -122,7 +122,7 @@ void MovieUI::searchAndDisplayMovies() const {
     }
 }
 
-void MovieUI::addCommentUI(const user* currentUser) const {
+void MovieUI::addCommentUI(user* currentUser) const {
     if (!currentUser) {
         std::cout << "You need to be logged in to comment!\n";
         return;
@@ -158,7 +158,7 @@ void MovieUI::addCommentUI(const user* currentUser) const {
     }
 }
 
-void MovieUI::editMovieUI(const user* currentUser) const {
+void MovieUI::editMovieUI(user* currentUser) const {
     if (!currentUser || !currentUser->getHasAdministratorRights()) {
         std::cout << "Administrator rights required!\n";
         return;
@@ -198,7 +198,7 @@ void MovieUI::editMovieUI(const user* currentUser) const {
     }
 }
 
-void MovieUI::deleteMovieUI(const user* currentUser) const {
+void MovieUI::deleteMovieUI(user* currentUser) const {
     if (!currentUser || !currentUser->getHasAdministratorRights()) {
         std::cout << "Administrator rights required!\n";
         return;
@@ -212,13 +212,13 @@ void MovieUI::deleteMovieUI(const user* currentUser) const {
     }
 }
 
-void MovieUI::viewWatchlist(const user* currentUser) {
+void MovieUI::viewWatchlist(user* currentUser) {
     if (!currentUser) {
         std::cout << "You need to be logged in to view your watchlist!\n";
         return;
     }
 
-    auto watchlist = currentUser->getWatchlist(); // Direct call to User class
+    auto watchlist = currentUser->getWatchlist();
     if (watchlist.empty()) {
         std::cout << "Your watchlist is empty.\n";
         return;
@@ -231,7 +231,7 @@ void MovieUI::viewWatchlist(const user* currentUser) {
     }
 }
 
-void MovieUI::addToWatchlist(const user* currentUser) const {
+void MovieUI::addToWatchlist(user* currentUser) const {
     if (!currentUser) {
         std::cout << "You need to be logged in to add to watchlist!\n";
         return;
@@ -242,14 +242,14 @@ void MovieUI::addToWatchlist(const user* currentUser) const {
 
     if (movieObj) {
         // Need to cast away const to modify the user's watchlist
-        const_cast<user*>(currentUser)->addToWatchlist(*movieObj);
+        currentUser->addToWatchlist(*movieObj);
         std::cout << "Movie added to watchlist successfully!\n";
     } else {
         std::cout << "Movie not found!\n";
     }
 }
 
-void MovieUI::removeFromWatchlist(const user* currentUser) {
+void MovieUI::removeFromWatchlist(user* currentUser) {
     if (!currentUser) {
         std::cout << "You need to be logged in to remove from watchlist!\n";
         return;
@@ -257,11 +257,11 @@ void MovieUI::removeFromWatchlist(const user* currentUser) {
 
     std::string title = getString("Enter movie title to remove from watchlist: ");
     // Need to cast away const to modify the user's watchlist
-    const_cast<user*>(currentUser)->removeFromWatchlist(title);
+    currentUser->removeFromWatchlist(title);
     std::cout << "Movie removed from watchlist successfully!\n";
 }
 
-void MovieUI::displayMainMenu(const user* currentUser) const {
+void MovieUI::displayMainMenu(user* currentUser) const {
     while (true) {
         std::cout << "\n=== Movie Database ===";
         if (currentUser) {
