@@ -10,9 +10,14 @@ add_executable(laboratory
         movie.cpp
         movie.h
         movie.cpp
-        movie_interface.h
         User.cpp
         User.h
         user_manager.cpp
         user_manager.h
+        comment.cpp
+        comment.h
+        comment_manager.cpp
+        comment_manager.h
+        movie_interface.cpp
+        movie_interface.h
 )

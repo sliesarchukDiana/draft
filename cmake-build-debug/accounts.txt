@@ -1,1 +1,2 @@
+regUser|123|0
 admin|admin123|1

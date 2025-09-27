@@ -152,6 +152,54 @@ User.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/User.cpp.s
 .PHONY : User.cpp.s
 
+comment.obj: comment.cpp.obj
+.PHONY : comment.obj
+
+# target to build an object file
+comment.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/comment.cpp.obj
+.PHONY : comment.cpp.obj
+
+comment.i: comment.cpp.i
+.PHONY : comment.i
+
+# target to preprocess a source file
+comment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/comment.cpp.i
+.PHONY : comment.cpp.i
+
+comment.s: comment.cpp.s
+.PHONY : comment.s
+
+# target to generate assembly for a file
+comment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/comment.cpp.s
+.PHONY : comment.cpp.s
+
+comment_manager.obj: comment_manager.cpp.obj
+.PHONY : comment_manager.obj
+
+# target to build an object file
+comment_manager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/comment_manager.cpp.obj
+.PHONY : comment_manager.cpp.obj
+
+comment_manager.i: comment_manager.cpp.i
+.PHONY : comment_manager.i
+
+# target to preprocess a source file
+comment_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/comment_manager.cpp.i
+.PHONY : comment_manager.cpp.i
+
+comment_manager.s: comment_manager.cpp.s
+.PHONY : comment_manager.s
+
+# target to generate assembly for a file
+comment_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/comment_manager.cpp.s
+.PHONY : comment_manager.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -200,6 +248,30 @@ movie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie.cpp.s
 .PHONY : movie.cpp.s
 
+movie_interface.obj: movie_interface.cpp.obj
+.PHONY : movie_interface.obj
+
+# target to build an object file
+movie_interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_interface.cpp.obj
+.PHONY : movie_interface.cpp.obj
+
+movie_interface.i: movie_interface.cpp.i
+.PHONY : movie_interface.i
+
+# target to preprocess a source file
+movie_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_interface.cpp.i
+.PHONY : movie_interface.cpp.i
+
+movie_interface.s: movie_interface.cpp.s
+.PHONY : movie_interface.s
+
+# target to generate assembly for a file
+movie_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_interface.cpp.s
+.PHONY : movie_interface.cpp.s
+
 user_manager.obj: user_manager.cpp.obj
 .PHONY : user_manager.obj
 
@@ -236,12 +308,21 @@ help:
 	@echo ... User.obj
 	@echo ... User.i
 	@echo ... User.s
+	@echo ... comment.obj
+	@echo ... comment.i
+	@echo ... comment.s
+	@echo ... comment_manager.obj
+	@echo ... comment_manager.i
+	@echo ... comment_manager.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... movie.obj
 	@echo ... movie.i
 	@echo ... movie.s
+	@echo ... movie_interface.obj
+	@echo ... movie_interface.i
+	@echo ... movie_interface.s
 	@echo ... user_manager.obj
 	@echo ... user_manager.i
 	@echo ... user_manager.s
