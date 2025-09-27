@@ -25,8 +25,7 @@ void CommentManager::loadCommentsFromFile() {
             std::getline(iss, text, '|') &&
             std::getline(iss, ratingStr, '|') &&
             std::getline(iss, timestampStr)) {
-            
-            // Заменяем специальные символы в тексте
+
             size_t pos = 0;
             while ((pos = text.find("\\n")) != std::string::npos) {
                 text.replace(pos, 2, "\n");
@@ -51,7 +50,6 @@ void CommentManager::saveCommentsToFile() const {
     for (const auto& pair : commentsByMovie) {
         for (const auto& comment : pair.second) {
             std::string text = comment->getText();
-            // Заменяем переносы строк на специальные символы для сохранения
             size_t pos = 0;
             while ((pos = text.find('\n')) != std::string::npos) {
                 text.replace(pos, 1, "\\n");

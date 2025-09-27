@@ -8,10 +8,7 @@
 class MovieUI {
 private:
     MovieService& movieService;
-
-    // Вспомогательные методы для ввода
     static int getInt(const std::string& prompt, int min, int max) ;
-
     static std::string getString(const std::string& prompt);
     static bool getYesNo(const std::string& prompt) ;
     movie createMovieFromInput() const;
@@ -19,20 +16,16 @@ private:
 public:
     explicit MovieUI(MovieService& service);
     ~MovieUI() = default;
-
-    // Основные UI методы
     void displayMainMenu( user* currentUser) const;
     void displayMovieDetails(const std::string& title) const;
     void displayAllMovies() const;
     void searchAndDisplayMovies() const;
 
-    // Операции требующие аутентификации
     void addMovieUI( user* currentUser) const;
     void editMovieUI( user* currentUser) const;
     void deleteMovieUI( user* currentUser) const;
     void addCommentUI( user* currentUser) const;
 
-    // Методы для работы с watchlist
     static void viewWatchlist( user* currentUser) ;
     void addToWatchlist(user* currentUser) const;
     static void removeFromWatchlist( user* currentUser) ;

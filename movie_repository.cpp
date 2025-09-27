@@ -32,8 +32,7 @@ void MovieRepository::loadFromFile() {
             std::getline(iss, plot)) {
 
             Genre genre = stringToGenre(genreStr);
-            movies.push_back(std::make_unique<movie>(title, genre, director, country,
-                                                   year, budget, gross, runningTime, plot));
+            movies.push_back(std::make_unique<movie>(title, genre, director, country, year, budget, gross, runningTime, plot));
         }
     }
     file.close();

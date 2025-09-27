@@ -241,7 +241,6 @@ void MovieUI::addToWatchlist(user* currentUser) const {
     movie* movieObj = movieService.getMovieByTitle(title);
 
     if (movieObj) {
-        // Need to cast away const to modify the user's watchlist
         currentUser->addToWatchlist(*movieObj);
         std::cout << "Movie added to watchlist successfully!\n";
     } else {
@@ -256,7 +255,6 @@ void MovieUI::removeFromWatchlist(user* currentUser) {
     }
 
     std::string title = getString("Enter movie title to remove from watchlist: ");
-    // Need to cast away const to modify the user's watchlist
     currentUser->removeFromWatchlist(title);
     std::cout << "Movie removed from watchlist successfully!\n";
 }
