@@ -18,6 +18,10 @@ add_executable(laboratory
         comment.h
         comment_manager.cpp
         comment_manager.h
-        movie_interface.cpp
-        movie_interface.h
+        movie_repository.cpp
+        movie_repository.h
+        movie_service.cpp
+        movie_service.h
+        movie_ui.cpp
+        movie_ui.h
 )

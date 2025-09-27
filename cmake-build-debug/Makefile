@@ -248,29 +248,77 @@ movie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie.cpp.s
 .PHONY : movie.cpp.s
 
-movie_interface.obj: movie_interface.cpp.obj
-.PHONY : movie_interface.obj
+movie_repository.obj: movie_repository.cpp.obj
+.PHONY : movie_repository.obj
 
 # target to build an object file
-movie_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_interface.cpp.obj
-.PHONY : movie_interface.cpp.obj
+movie_repository.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_repository.cpp.obj
+.PHONY : movie_repository.cpp.obj
 
-movie_interface.i: movie_interface.cpp.i
-.PHONY : movie_interface.i
+movie_repository.i: movie_repository.cpp.i
+.PHONY : movie_repository.i
 
 # target to preprocess a source file
-movie_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_interface.cpp.i
-.PHONY : movie_interface.cpp.i
+movie_repository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_repository.cpp.i
+.PHONY : movie_repository.cpp.i
 
-movie_interface.s: movie_interface.cpp.s
-.PHONY : movie_interface.s
+movie_repository.s: movie_repository.cpp.s
+.PHONY : movie_repository.s
 
 # target to generate assembly for a file
-movie_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_interface.cpp.s
-.PHONY : movie_interface.cpp.s
+movie_repository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_repository.cpp.s
+.PHONY : movie_repository.cpp.s
+
+movie_service.obj: movie_service.cpp.obj
+.PHONY : movie_service.obj
+
+# target to build an object file
+movie_service.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_service.cpp.obj
+.PHONY : movie_service.cpp.obj
+
+movie_service.i: movie_service.cpp.i
+.PHONY : movie_service.i
+
+# target to preprocess a source file
+movie_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_service.cpp.i
+.PHONY : movie_service.cpp.i
+
+movie_service.s: movie_service.cpp.s
+.PHONY : movie_service.s
+
+# target to generate assembly for a file
+movie_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_service.cpp.s
+.PHONY : movie_service.cpp.s
+
+movie_ui.obj: movie_ui.cpp.obj
+.PHONY : movie_ui.obj
+
+# target to build an object file
+movie_ui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_ui.cpp.obj
+.PHONY : movie_ui.cpp.obj
+
+movie_ui.i: movie_ui.cpp.i
+.PHONY : movie_ui.i
+
+# target to preprocess a source file
+movie_ui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_ui.cpp.i
+.PHONY : movie_ui.cpp.i
+
+movie_ui.s: movie_ui.cpp.s
+.PHONY : movie_ui.s
+
+# target to generate assembly for a file
+movie_ui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laboratory.dir\build.make CMakeFiles/laboratory.dir/movie_ui.cpp.s
+.PHONY : movie_ui.cpp.s
 
 user_manager.obj: user_manager.cpp.obj
 .PHONY : user_manager.obj
@@ -320,9 +368,15 @@ help:
 	@echo ... movie.obj
 	@echo ... movie.i
 	@echo ... movie.s
-	@echo ... movie_interface.obj
-	@echo ... movie_interface.i
-	@echo ... movie_interface.s
+	@echo ... movie_repository.obj
+	@echo ... movie_repository.i
+	@echo ... movie_repository.s
+	@echo ... movie_service.obj
+	@echo ... movie_service.i
+	@echo ... movie_service.s
+	@echo ... movie_ui.obj
+	@echo ... movie_ui.i
+	@echo ... movie_ui.s
 	@echo ... user_manager.obj
 	@echo ... user_manager.i
 	@echo ... user_manager.s

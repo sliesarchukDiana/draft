@@ -161,20 +161,50 @@ CMakeFiles/laboratory.dir/comment_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratory.dir/comment_manager.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Desktop\draft\comment_manager.cpp -o CMakeFiles\laboratory.dir\comment_manager.cpp.s
 
-CMakeFiles/laboratory.dir/movie_interface.cpp.obj: CMakeFiles/laboratory.dir/flags.make
-CMakeFiles/laboratory.dir/movie_interface.cpp.obj: CMakeFiles/laboratory.dir/includes_CXX.rsp
-CMakeFiles/laboratory.dir/movie_interface.cpp.obj: C:/Users/user/Desktop/draft/movie_interface.cpp
-CMakeFiles/laboratory.dir/movie_interface.cpp.obj: CMakeFiles/laboratory.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\user\Desktop\draft\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/laboratory.dir/movie_interface.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratory.dir/movie_interface.cpp.obj -MF CMakeFiles\laboratory.dir\movie_interface.cpp.obj.d -o CMakeFiles\laboratory.dir\movie_interface.cpp.obj -c C:\Users\user\Desktop\draft\movie_interface.cpp
+CMakeFiles/laboratory.dir/movie_repository.cpp.obj: CMakeFiles/laboratory.dir/flags.make
+CMakeFiles/laboratory.dir/movie_repository.cpp.obj: CMakeFiles/laboratory.dir/includes_CXX.rsp
+CMakeFiles/laboratory.dir/movie_repository.cpp.obj: C:/Users/user/Desktop/draft/movie_repository.cpp
+CMakeFiles/laboratory.dir/movie_repository.cpp.obj: CMakeFiles/laboratory.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\user\Desktop\draft\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/laboratory.dir/movie_repository.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratory.dir/movie_repository.cpp.obj -MF CMakeFiles\laboratory.dir\movie_repository.cpp.obj.d -o CMakeFiles\laboratory.dir\movie_repository.cpp.obj -c C:\Users\user\Desktop\draft\movie_repository.cpp
 
-CMakeFiles/laboratory.dir/movie_interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratory.dir/movie_interface.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Desktop\draft\movie_interface.cpp > CMakeFiles\laboratory.dir\movie_interface.cpp.i
+CMakeFiles/laboratory.dir/movie_repository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratory.dir/movie_repository.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Desktop\draft\movie_repository.cpp > CMakeFiles\laboratory.dir\movie_repository.cpp.i
 
-CMakeFiles/laboratory.dir/movie_interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratory.dir/movie_interface.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Desktop\draft\movie_interface.cpp -o CMakeFiles\laboratory.dir\movie_interface.cpp.s
+CMakeFiles/laboratory.dir/movie_repository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratory.dir/movie_repository.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Desktop\draft\movie_repository.cpp -o CMakeFiles\laboratory.dir\movie_repository.cpp.s
+
+CMakeFiles/laboratory.dir/movie_service.cpp.obj: CMakeFiles/laboratory.dir/flags.make
+CMakeFiles/laboratory.dir/movie_service.cpp.obj: CMakeFiles/laboratory.dir/includes_CXX.rsp
+CMakeFiles/laboratory.dir/movie_service.cpp.obj: C:/Users/user/Desktop/draft/movie_service.cpp
+CMakeFiles/laboratory.dir/movie_service.cpp.obj: CMakeFiles/laboratory.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\user\Desktop\draft\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/laboratory.dir/movie_service.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratory.dir/movie_service.cpp.obj -MF CMakeFiles\laboratory.dir\movie_service.cpp.obj.d -o CMakeFiles\laboratory.dir\movie_service.cpp.obj -c C:\Users\user\Desktop\draft\movie_service.cpp
+
+CMakeFiles/laboratory.dir/movie_service.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratory.dir/movie_service.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Desktop\draft\movie_service.cpp > CMakeFiles\laboratory.dir\movie_service.cpp.i
+
+CMakeFiles/laboratory.dir/movie_service.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratory.dir/movie_service.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Desktop\draft\movie_service.cpp -o CMakeFiles\laboratory.dir\movie_service.cpp.s
+
+CMakeFiles/laboratory.dir/movie_ui.cpp.obj: CMakeFiles/laboratory.dir/flags.make
+CMakeFiles/laboratory.dir/movie_ui.cpp.obj: CMakeFiles/laboratory.dir/includes_CXX.rsp
+CMakeFiles/laboratory.dir/movie_ui.cpp.obj: C:/Users/user/Desktop/draft/movie_ui.cpp
+CMakeFiles/laboratory.dir/movie_ui.cpp.obj: CMakeFiles/laboratory.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\user\Desktop\draft\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/laboratory.dir/movie_ui.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratory.dir/movie_ui.cpp.obj -MF CMakeFiles\laboratory.dir\movie_ui.cpp.obj.d -o CMakeFiles\laboratory.dir\movie_ui.cpp.obj -c C:\Users\user\Desktop\draft\movie_ui.cpp
+
+CMakeFiles/laboratory.dir/movie_ui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratory.dir/movie_ui.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\user\Desktop\draft\movie_ui.cpp > CMakeFiles\laboratory.dir\movie_ui.cpp.i
+
+CMakeFiles/laboratory.dir/movie_ui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratory.dir/movie_ui.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\user\Desktop\draft\movie_ui.cpp -o CMakeFiles\laboratory.dir\movie_ui.cpp.s
 
 # Object files for target laboratory
 laboratory_OBJECTS = \
@@ -184,7 +214,9 @@ laboratory_OBJECTS = \
 "CMakeFiles/laboratory.dir/user_manager.cpp.obj" \
 "CMakeFiles/laboratory.dir/comment.cpp.obj" \
 "CMakeFiles/laboratory.dir/comment_manager.cpp.obj" \
-"CMakeFiles/laboratory.dir/movie_interface.cpp.obj"
+"CMakeFiles/laboratory.dir/movie_repository.cpp.obj" \
+"CMakeFiles/laboratory.dir/movie_service.cpp.obj" \
+"CMakeFiles/laboratory.dir/movie_ui.cpp.obj"
 
 # External object files for target laboratory
 laboratory_EXTERNAL_OBJECTS =
@@ -195,12 +227,14 @@ laboratory.exe: CMakeFiles/laboratory.dir/User.cpp.obj
 laboratory.exe: CMakeFiles/laboratory.dir/user_manager.cpp.obj
 laboratory.exe: CMakeFiles/laboratory.dir/comment.cpp.obj
 laboratory.exe: CMakeFiles/laboratory.dir/comment_manager.cpp.obj
-laboratory.exe: CMakeFiles/laboratory.dir/movie_interface.cpp.obj
+laboratory.exe: CMakeFiles/laboratory.dir/movie_repository.cpp.obj
+laboratory.exe: CMakeFiles/laboratory.dir/movie_service.cpp.obj
+laboratory.exe: CMakeFiles/laboratory.dir/movie_ui.cpp.obj
 laboratory.exe: CMakeFiles/laboratory.dir/build.make
 laboratory.exe: CMakeFiles/laboratory.dir/linkLibs.rsp
 laboratory.exe: CMakeFiles/laboratory.dir/objects1.rsp
 laboratory.exe: CMakeFiles/laboratory.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\user\Desktop\draft\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable laboratory.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\user\Desktop\draft\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable laboratory.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\laboratory.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
