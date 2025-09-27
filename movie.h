@@ -21,8 +21,9 @@ enum class Genre {
     adventure,
     documentary
 };
-Genre stringToGenre(const std::string& genreStr);
 
+std::string fromEnumToString(Genre genre);
+Genre stringToGenre(const std::string& genreStr);
 
 class movie {
 private:

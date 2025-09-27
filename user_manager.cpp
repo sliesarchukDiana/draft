@@ -22,7 +22,6 @@ void UserManager::loadUsersFromFile() {
     while (std::getline(file, line)) {
         user* newUser = deserializeUser(line);
         if (newUser) {
-            // Заменяем decomposition declaration
             users[newUser->getUsername()] = std::unique_ptr<user>(newUser);
         }
     }
@@ -115,7 +114,6 @@ void UserManager::listAllUsers() const {
     }
 
     std::cout << "=== Registered Users ===\n";
-    // Заменяем decomposition declaration
     for (const auto& pair : users) {
         const std::string& username = pair.first;
         const std::unique_ptr<user>& userPtr = pair.second;
